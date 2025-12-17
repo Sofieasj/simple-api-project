@@ -1,4 +1,8 @@
 package com.example.simple_api;
 
-public class PersonNotFoundException {
+// id not found exception handling
+class PersonNotFoundException extends RuntimeException {
+    PersonNotFoundException(int id) {
+        super("Could not find person " + id);
+    }
 }
